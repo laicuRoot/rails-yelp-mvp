@@ -1,0 +1,12 @@
+<div class="row text-center">
+  <div class="col-sm-12">
+    <ul class="list-group">
+      <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item">
+        <%= link_to "#{restaurant.name}", restaurant_path(restaurant) %>
+      </li>
+      <%= link_to "Leave a review", new_restaurant_review_path(restaurant), class: 'text-warning' %>
+      <% end %>
+    </ul>
+  </div>
+</div>
